@@ -1,0 +1,408 @@
+<!-- 
+
+this is a page for my 2013 project "SPIKY" (former name "Hedgehog")
+
+20140109
+1) building the page, applying the title and the roughly page division.
+
+20140110
+2) set photo attributes.(On the airplane to SF!)
+
+20140116
+3) change the title picture.
+
+20140120
+4) set up light box and figure out the problem pictures would go to next paragraph, which was solved by set the specific div width.
+
+
+-->
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>SPIKY</title>
+	<script type="text/javascript">
+	    function init(){
+
+		var title=document.getElementById("myTitle");
+		var titleCtx=title.getContext("2d");
+
+		var titleImg=document.getElementById("hedgehogTitle");
+		var titleImg01=document.getElementById("hedgehogTitle01");
+		titleCtx.drawImage(titleImg,0,0,1350,1000);
+
+		var btn=document.getElementById("btn");
+
+		function HoverInTitle (){
+		    titleCtx.drawImage(titleImg01,0,0,1350,1000);		
+		}
+
+		function HoverOutTitle (){
+			titleCtx.drawImage(titleImg,0,0,1350,1000);
+		}
+
+		btn.addEventListener("mouseover", HoverInTitle, false);
+		btn.addEventListener("mousedown", HoverInTitle, false);
+		btn.addEventListener("mouseout", HoverOutTitle, false);
+		btn.addEventListener("mouseup", HoverInTitle, false);
+
+		var backLayer=document.getElementById("myBackLayer");
+		var backLayerCtx=backLayer.getContext("2d");
+		backLayerCtx.fillStyle="rgba(255,255,255, 0.5)";
+		backLayerCtx.fillRect(0,0,1350,337);
+
+	    var canvas01=document.getElementById("canvas01");
+	    var canvas01Ctx=canvas01.getContext("2d");
+	    canvas01Ctx.drawImage(pic01,0,0,506,337);
+
+	    var canvas02=document.getElementById("canvas02");
+	    var canvas02Ctx=canvas02.getContext("2d");
+	    canvas02Ctx.globalAlpha = 0.5;
+	    canvas02Ctx.drawImage(pic02,224,0,25,337,0,0,25,337);
+
+	    var canvas03=document.getElementById("canvas03");
+	    var canvas03Ctx=canvas03.getContext("2d");
+	    canvas03Ctx.globalAlpha = 0.5;
+	    canvas03Ctx.drawImage(pic03,232,0,25,337,0,0,25,337);
+
+	    var canvas04=document.getElementById("canvas04");
+	    var canvas04Ctx=canvas04.getContext("2d");
+	    canvas04Ctx.globalAlpha = 0.5;
+	    canvas04Ctx.drawImage(pic04,260,0,25,337,0,0,25,337);
+
+	    var canvas05=document.getElementById("canvas05");
+	    var canvas05Ctx=canvas05.getContext("2d");
+	    canvas05Ctx.globalAlpha = 0.5;
+	    canvas05Ctx.drawImage(pic05,400,0,25,337,0,0,25,337);
+
+	    var canvas06=document.getElementById("canvas06");
+	    var canvas06Ctx=canvas06.getContext("2d");
+	    canvas06Ctx.globalAlpha = 0.5;
+	    canvas06Ctx.drawImage(pic06,220,0,25,337,0,0,25,337);
+
+
+		function HoverInCanvas01 (){
+			canvas01.setAttribute("width", "506");
+			canvas01Ctx.drawImage(pic01,0,0,506,337,0,0,506,337);
+		}
+
+		function HoverOutCanvas01 (){
+			canvas01.setAttribute("width", "25");
+			canvas01Ctx.globalAlpha = 0.5;
+			canvas01Ctx.drawImage(pic01,130,0,25,337,0,0,25,337);
+			canvas01.setAttribute("width", "506");
+			canvas01Ctx.drawImage(pic01,0,0,506,337,0,0,506,337);
+		}
+
+		function HoverInCanvas02 (){
+			canvas02.setAttribute("width", "506");
+			canvas02Ctx.drawImage(pic02,0,0,506,337);
+			canvas01.setAttribute("width", "25");
+			canvas01Ctx.globalAlpha = 0.5;
+			canvas01Ctx.drawImage(pic01,130,0,25,337,0,0,25,337);
+		}
+
+		function HoverOutCanvas02 (){
+			canvas02.setAttribute("width", "25");
+			canvas02Ctx.globalAlpha = 0.5;
+			canvas02Ctx.drawImage(pic02,224,0,25,337,0,0,25,337);
+			canvas01.setAttribute("width", "506");
+			canvas01Ctx.drawImage(pic01,0,0,506,337,0,0,506,337);
+		}
+
+		function HoverInCanvas03 (){
+			canvas03.setAttribute("width", "506");
+			canvas03Ctx.drawImage(pic03,0,0,506,337);
+			canvas01.setAttribute("width", "25");
+			canvas01Ctx.globalAlpha = 0.5;
+			canvas01Ctx.drawImage(pic01,130,0,25,337,0,0,25,337);
+		}
+
+		function HoverOutCanvas03 (){
+			canvas03.setAttribute("width", "25");
+			canvas03Ctx.globalAlpha = 0.5;
+			canvas03Ctx.drawImage(pic03,232,0,25,337,0,0,25,337);
+			canvas01.setAttribute("width", "506");
+			canvas01Ctx.drawImage(pic01,0,0,506,337,0,0,506,337);
+		}
+
+		function HoverInCanvas04 (){
+			canvas04.setAttribute("width", "506");
+			canvas04Ctx.drawImage(pic04,0,0,506,337);
+			canvas01.setAttribute("width", "25");
+			canvas01Ctx.globalAlpha = 0.5;
+			canvas01Ctx.drawImage(pic01,130,0,25,337,0,0,25,337);
+		}
+
+		function HoverOutCanvas04 (){
+			canvas04.setAttribute("width", "25");
+			canvas04Ctx.globalAlpha = 0.5;
+			canvas04Ctx.drawImage(pic04,260,0,25,337,0,0,25,337);
+			canvas01.setAttribute("width", "506");
+			canvas01Ctx.drawImage(pic01,0,0,506,337,0,0,506,337);
+		}
+
+		function HoverInCanvas05 (){
+			canvas05.setAttribute("width", "506");
+			canvas05Ctx.drawImage(pic05,0,0,506,337);
+			canvas01.setAttribute("width", "25");
+			canvas01Ctx.globalAlpha = 0.5;
+			canvas01Ctx.drawImage(pic01,130,0,25,337,0,0,25,337);
+		}
+
+		function HoverOutCanvas05 (){
+			canvas05.setAttribute("width", "25");
+			canvas05Ctx.globalAlpha = 0.5;
+			canvas05Ctx.drawImage(pic05,400,0,25,337,0,0,25,337);
+			canvas01.setAttribute("width", "506");
+			canvas01Ctx.drawImage(pic01,0,0,506,337,0,0,506,337);
+		}
+
+		function HoverInCanvas06 (){
+			canvas06.setAttribute("width", "506");
+			canvas06Ctx.drawImage(pic06,0,0,506,337);
+			canvas01.setAttribute("width", "25");
+			canvas01Ctx.globalAlpha = 0.5;
+			canvas01Ctx.drawImage(pic01,130,0,25,337,0,0,25,337);
+		}
+
+		function HoverOutCanvas06 (){
+			canvas06.setAttribute("width", "25");
+			canvas06Ctx.globalAlpha = 0.5;
+			canvas06Ctx.drawImage(pic06,220,0,25,337,0,0,25,337);
+			canvas01.setAttribute("width", "506");
+			canvas01Ctx.drawImage(pic01,0,0,506,337,0,0,506,337);
+		}
+
+		canvas01.addEventListener("mouseover", HoverInCanvas01, false);
+		canvas01.addEventListener("mousedown", HoverInCanvas01, false);
+		canvas01.addEventListener("mouseout", HoverOutCanvas01, false);
+
+		canvas02.addEventListener("mouseover", HoverInCanvas02, false);
+		canvas02.addEventListener("mousedown", HoverInCanvas02, false);
+		canvas02.addEventListener("mouseout", HoverOutCanvas02, false);
+
+		canvas03.addEventListener("mouseover", HoverInCanvas03, false);
+		canvas03.addEventListener("mousedown", HoverInCanvas03, false);
+		canvas03.addEventListener("mouseout", HoverOutCanvas03, false);
+
+		canvas04.addEventListener("mouseover", HoverInCanvas04, false);
+		canvas04.addEventListener("mousedown", HoverInCanvas04, false);
+		canvas04.addEventListener("mouseout", HoverOutCanvas04, false);
+
+		canvas05.addEventListener("mouseover", HoverInCanvas05, false);
+		canvas05.addEventListener("mousedown", HoverInCanvas05, false);
+		canvas05.addEventListener("mouseout", HoverOutCanvas05, false);
+
+		canvas06.addEventListener("mouseover", HoverInCanvas06, false);
+		canvas06.addEventListener("mousedown", HoverInCanvas06, false);
+		canvas06.addEventListener("mouseout", HoverOutCanvas06, false);
+
+		var lightBoxTrigger=document.getElementsByClassName("lightboxTrigger");
+	    lightBoxTrigger[0].addEventListener("mousedown", lightBoxPop, false);
+
+	    var lightBox;
+	    var myVideoCanvas;
+
+		function lightBoxPop(){
+           event.preventDefault();
+           lightBox = document.createElement('div');
+           var closeBtn = document.createElement('p');
+           var closeText = document.createTextNode("click here to close");
+           myVideo = document.createElement('iframe');
+           myVideo.src = "http://www.youtube.com/embed/IYXq77_QhDU?rel=0";
+           lightBox.className = "lightbox";
+           document.body.appendChild(lightBox);
+           lightBox.appendChild(myVideo);
+           lightBox.appendChild(closeBtn);
+           closeBtn.appendChild(closeText);
+           lightBox.addEventListener("mousedown", lightBoxClose, false);
+
+		}
+
+		function lightBoxClose(){
+		   document.body.removeChild(lightBox);
+		}
+
+	}
+	</script>
+
+	<style type="text/css">
+
+	body
+    {
+        border-style:none;
+        border-width:0;
+    }
+
+	h1
+	{
+	    font:16px Verdana;
+	    line-height:150%;
+	    color:#330A00;
+	}
+
+	.btn
+	{
+		width: 1086; 
+		height: 480;
+		left:120; 
+		top:60; 
+		position: absolute;
+	}
+
+	.btnBlock
+	{
+		width: 300; 
+		height: 200;
+		position: absolute;
+	}
+
+	.picClass
+	{
+		float: left;
+	}
+
+	.footer
+	{
+		background-color: #222222;
+		width: 1350; 
+		height: 40;
+		left:0; 
+		position: absolute;
+		border-style:none;
+		border-width:0;
+	    margin-top: 992px;
+	}
+
+	.lightboxTrigger
+	{
+		color:#fff;
+		font-size:16px;
+        font-family: verdana;
+        text-align:right;
+        margin-right:70px;
+	}
+
+	.lightbox
+	{
+		width:100%; 
+		height:100%;
+		top:0;
+		left:0;
+		margin:0 auto; 
+		background: rgba(0,0,0,.7);
+        border-top:none; 
+		position: fixed;
+		text-align:center;
+	}
+
+	.lightbox p 
+    {
+        font-family: verdana;
+        font-size:40px;
+        margin-top:60px;
+        margin-bottom:20px;
+        color:#ffffff;
+    }
+
+    .lightbox iframe
+    {
+        width:640;
+        height:361;
+        margin-top:40px;
+        border-style:none;
+		border-width:0;
+        box-shadow:0 0 25px #111;
+        -webkit-box-shadow:0 0 25px #111;
+        -moz-box-shadow:0 0 25px #111;
+        allowfullscreen;
+    }
+
+	#titleDiv
+	{
+		left:0; 
+		top:0; 
+		position: absolute; 
+		border-style:none; 
+		border-width:0;
+		padding-bottom: 40px;
+	}
+
+	#backLayer
+	{
+		width:1350; 
+		left:0; 
+		top:663; 
+		position: absolute; 
+		border-style:none; 
+		border-width:0;
+	}
+
+	#picsContainer
+	{
+		width:631; 
+		top:663; 
+		left:718; 
+		position: absolute; 
+		border-style:none; 
+		border-width:0;
+	}
+
+	#intro
+	{
+		left:40; 
+		top:696; 
+		width: 640; 
+		position: absolute;
+	}
+
+	</style>
+</head>
+
+<body onload="init()">
+
+<div id= "titleDiv">
+	<canvas id="myTitle" width="1350" height="1000" style="border-style:none; border-width:0px;"> 
+	</canvas>
+	<img id="hedgehogTitle" src="images/title.jpg" alt="title" width="50%" height="auto" style="left:0; top:0; visibility:hidden; position: absolute;">
+	<img id="hedgehogTitle01" src="images/title_01.jpg" alt="title" width="50%" height="auto" style="left:0; top:0; visibility:hidden; position: absolute;">
+	
+	<img id="pic01" width="10%" height="auto" src="images/pic01_b.jpg" style="left:0; top:0;visibility:hidden;position: absolute;">
+	<img id="pic02" width="10%" height="auto" src="images/pic02_b.jpg" style="left:0; top:0;visibility:hidden;position: absolute;">
+	<img id="pic03"width="10%" height="auto" src="images/pic03_b.jpg" style="left:0; top:0;visibility:hidden;position: absolute;">
+	<img id="pic04" width="10%" height="auto" src="images/pic04_b.jpg"style="left:0; top:0;visibility:hidden;position: absolute;">
+	<img id="pic05" width="10%" height="auto" src="images/pic05_b.jpg" style="left:0; top:0;visibility:hidden;position: absolute;">
+	<img id="pic06" width="10%" height="auto" src="images/pic06_b.jpg" style="left:0; top:0;visibility:hidden;position: absolute;">
+</div>
+
+<div id= "backLayer">
+    <canvas id="myBackLayer" width="1350" height="337" style="border-style:none;border-width:0px"></canvas>
+</div>
+
+
+<div id ="picsContainer">
+<canvas id ="canvas01" class ="picClass" width="506" height="337"></canvas><canvas id ="canvas02" class ="picClass" width="25" height="337"></canvas><canvas id ="canvas03" class ="picClass" width="25" height="337"></canvas><canvas id ="canvas04" class ="picClass" width="25" height="337"></canvas><canvas id ="canvas05" class ="picClass" width="25" height="337"></canvas><canvas id ="canvas06" class ="picClass" width="25" height="337"></canvas></div>
+
+
+<div id= "intro">
+<h1>SPIKY is an interactive/kinetic scuplture inspired by animals with spikes to protect themselves. With the sensors and motors, SPIKY is able to react to the environment, so that if someone's approacing it, the spikes will immediately be raise up to scare off visitors. The sculpture is an experiment for both simplifying the original appereance of these animals and marrying my personal view.</h1>
+<h1>Move your mouse to hover the title(if you haven't), to see what SPIKY can do.</h1>
+<h1> 15in x 10in x 7in Wood&nbsp;&nbsp;&nbsp;&nbsp;<a href class ="lightboxTrigger" style="">WATCH VIDEO</a></h1>
+
+</div>
+
+<div id= "footer" class= "footer">
+</div>
+
+<div id= "btn" class= "btn">
+</div>
+
+<div id= "btnblock01" class= "btnBlock" style="left:200; top:340;">
+</div>
+
+<div id= "btnblock02" class= "btnBlock" style="left:840; top:340;">
+</div>
+	
+</body>
+</html>
